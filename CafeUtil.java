@@ -23,8 +23,17 @@ public class CafeUtil {
         return orderTotal;    
     }
 
-    void displayMenu(ArrayList<String> menuItems){
-
-
+    public void displayMenu(ArrayList<String> menuItems){
+        for(int id = 0; id <menuItems.size(); id ++){
+            System.out.printf("( %s %s ) ", id, menuItems.get(id));
+        }
+    }
+    
+    public void addCustomer(ArrayList<String> customerList){
+        System.out.println("Please enter your name:");
+        String userName = System.console().readLine();
+        System.out.printf("Hello there %s!!", userName);
+        customerList.add(userName);
+        System.out.println(customerList);
     }
 }
